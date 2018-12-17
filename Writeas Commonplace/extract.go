@@ -40,11 +40,12 @@ func main() {
 
 		// Feed the title and content into a new Write.as post
 		// The url of the new post will show in the cmd line
-		// It will show in your list of annonymous posts
+		// 
 
 		p, err := c.CreatePost(&writeas.PostParams{
 			Title:   title,
 			Content: content,
+			Collection: "commonplace", // Put in the collection (blog) name you want to publish the post in
 		})
 		if err != nil {
 			fmt.Printf("%v", err)
