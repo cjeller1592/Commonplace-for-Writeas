@@ -44,7 +44,7 @@ func main() {
 
 		p, err := c.CreatePost(&writeas.PostParams{
 			Title:   title,
-			Content: content,
+			Content: content + "\n\n [Link to Source](" + url + ")",
 			Collection: "commonplace", // Put in the collection (blog) name you want to publish the post in
 		})
 		if err != nil {
